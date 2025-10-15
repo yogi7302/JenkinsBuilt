@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'java -cp target/HelloJenkins-1.0-SNAPSHOT.jar com.example.App'
+                bat 'java -cp target/HelloJenkins-1.0-SNAPSHOT.jar com.example.App'
             }
         }
     }
